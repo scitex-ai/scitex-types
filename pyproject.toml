@@ -29,7 +29,7 @@ dependencies = [
     # `_ArrayLike` to gate the optional numpy/pandas/xarray/torch
     # members of the ArrayLike union; the helper lives in scitex-dev's
     # light core (no heavy transitive imports).
-    "scitex-dev",
+    "scitex-dev>=0.11.5",
 ]
 
 [project.optional-dependencies]
@@ -77,6 +77,10 @@ packages = ["src/scitex_types"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-x -q"
+markers = [
+    "smoke: fast CLI happy-path tests (<60s, runs on every PR)",
+    "e2e: end-to-end workflows against real subsystems (runs on every PR)",
+]
 
 [tool.coverage.run]
 parallel = true
