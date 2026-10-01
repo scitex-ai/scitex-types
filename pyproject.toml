@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "scitex-types"
-version = "0.1.6"
+version = "0.1.7"
 description = "Scientific type definitions (ArrayLike, ColorLike) and validation"
 readme = "README.md"
 license = "AGPL-3.0-only"
@@ -41,6 +41,15 @@ all = [
     "pandas",
     "torch",
     "xarray",
+]
+
+# The reusable Sphinx job installs this extra explicitly.
+docs = [
+    "sphinx>=7.0",
+    "sphinx-rtd-theme>=2.0",
+    "myst-parser>=2.0",
+    "sphinx-copybutton>=0.5",
+    "sphinx-autodoc-typehints>=1.25",
 ]
 
 # Tier 3 — maintainer-only tools (tests + docs build). Does not

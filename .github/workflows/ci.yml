@@ -43,6 +43,9 @@ jobs:
     secrets: inherit
 
   rtd-sphinx-build:
+    # Match the native Read the Docs interpreter.
     # New required-status-check context: "rtd-sphinx-build / docs-sphinx"
     uses: scitex-ai/.github/.github/workflows/rtd-sphinx-build.yml@main
+    with:
+      python_version: "3.11"
     secrets: inherit
