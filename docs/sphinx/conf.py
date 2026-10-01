@@ -91,7 +91,7 @@ html_theme_options = {
     "prev_next_buttons_location": "bottom",
 }
 
-html_static_path = ["_static"]
+html_static_path = []
 html_title = f"{project} v{release}"
 html_short_title = project
 
