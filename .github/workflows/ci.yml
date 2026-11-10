@@ -30,6 +30,8 @@ jobs:
   pytest-matrix:
     # New required-status-check context: "pytest-matrix / pytest-matrix-on-ubuntu-py<X.YY>"
     uses: scitex-ai/.github/.github/workflows/pytest-matrix.yml@main
+    with:
+      job_owned_environment: true
     secrets: inherit
 
   import-smoke:
